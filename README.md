@@ -5,7 +5,7 @@ Versão 1
 
 Tela de login para entrar no site Orange Points.
 
-Status: Em Progresso
+Status: Finalizado
 
 ## Tecnologias
 - HTML
