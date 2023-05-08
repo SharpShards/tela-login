@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --prin: #db4906;
+    --sec: #eb672f;
+    --cinP: #191919;
+    --cinC: #202020;
+    --letras: #FFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html::-webkit-scrollbar{
+    width: 10px;
+    
+    background-color: var(--cinC);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--prin);
+}
+
+main{
+    display: flex;
+
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+
+    background-color: var(--cinP);
+
+    padding: 60px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+
+    height: fit-content;
+    width: 600px;
+
+    background-color: var(--cinC);
+
+    border: 2px solid var(--prin);
+    border-radius: 24px;
+
+    padding: 40px;
+
+    flex-direction: column;
+}
+
+#dvFundoLogo{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#dvFundoLogo img{
+    height: 40px;
+    width: 40px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#dvFundoLogo p{
+    display: flex;
+
+    color: var(--prin);
+    font-size: 3rem;
+    font-weight: 600;
+
+    text-align: center;
+
+    align-items: center;
+}
+
+#dvTítulo{
+    display: flex;
+
+    height: fit-content;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    justify-content: center;
+}
+
+#dvTítulo h1{
+    color: var(--sec);
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#dvCampos{
+    height: fit-content;
+}
+
+#dvCampos label{   
+    height: fit-content;
+    width: 100%;
+
+    color: var(--sec);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+#dvCampos input{
+    height: fit-content;
+    width: 100%;
+
+    background-color: transparent;
+
+    color: var(--letras);
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    border: 2px solid var(--sec);
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+#dvCampos input:focus{
+    background-color: var(--prin);
+    
+    border: 2px solid var(--prin);
+
+    box-shadow: 0 0 20px 5px var(--prin);
+}
+
+#dvCampos #dvSenha{
+    display: flex;
+
+    margin-top: 15px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dvCampos #dvSenha input{
+    flex: 1;
+
+    margin: 0;
+}
+
+#dvCampos #dvSenha img{
+    height: 30px;
+
+    margin-left: 20px;
+}
+
+#dvCampos #dvSenha img:hover{
+    cursor: pointer;
+}
+
+#pEsq{
+    width: fit-content;
+
+    color: var(--letras);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    padding-left: 12px;
+}
+
+#pEsq:hover{
+    cursor: pointer;
+
+    color: var(--prin);
+
+    transform: scale(1.1);
+    transition: transform 250ms ease;
+}
+
+#dvButton{
+    display: flex;
+
+    height: fit-content;
+
+    justify-content: center;
+}
+
+#dvButton button{
+    height: fit-content;
+    width: 200px;
+
+    background-color: transparent;
+
+    color: var(--letras);
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    border: 2px solid var(--prin);
+    border-radius: 30px;
+
+    padding: 20px;
+}
+
+#dvButton button:hover{
+    cursor: pointer;
+
+    background-color: var(--prin);
+
+    border: 2px solid var(--prin);
+
+    box-shadow: 0 0 20px 5px var(--prin);
+
+    transform: scale(1.05);
+
+    transition: transform 80ms linear;
+}
+
+#pCadas {
+    width: 100%;
+
+    color: var(--letras);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+#pCadas span:hover{
+    color: var(--prin);
+
+    cursor: pointer;
+}
+
+#dvCreditos{
+    display: flex;
+    display: none;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #000;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#dvCreditos img{
+    width: 200px;
+}
+
+@media(max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+
+    main{
+        padding: 10px;
+    }
+    
+    form{
+        width: 100%;
+
+        background-color: transparent;
+
+        border: transparent;
+
+        padding: 0;
+    }
+
+    #dvFundoLogo{
+        flex-direction: column;
+    }
+
+    #dvFundoLogo #dvLogo{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
