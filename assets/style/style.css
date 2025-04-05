@@ -173,6 +173,22 @@ form{
     cursor: pointer;
 }
 
+#dvRequisitos{
+    padding: 20px 50px 0px 10px;
+}
+
+#dvRequisitos #uLista{
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+#dvRequisitos #uLista .liItem{
+    color: #e03232;
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
+}
+
 #pEsq{
     width: fit-content;
 
