@@ -97,9 +97,39 @@ function verificarRequisitos(){
     }
 }
 
+function enviarAlerta(e){
+    // Se todos os requisitos forem satisfeitos, não envia o formulário de jeito nenhum
+    // dizendo que o usuário ou a senha estão incorretos.
+    if((lista.children[0].getAttribute("data-satisfeito") == "true") &&
+       (lista.children[1].getAttribute("data-satisfeito") == "true") &&
+       (lista.children[2].getAttribute("data-satisfeito") == "true") &&
+       (lista.children[3].getAttribute("data-satisfeito") == "true")){
+        erro.style.display = "flex"
+
+        erro.children[1].innerText = "Email ou senha incorreta." 
+    }else{
+        // Se os requisitos não forem satisfeitos, não envia o formulário e
+        // pede pra consertar
+        erro.style.display = "flex"
+
+        erro.children[1].innerText = "A senha precisa cumprir todos os requisitos."  
+    }
+
+    erro.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    // Impede o envio do formulário
+    e.preventDefault()
+}
+
 // Declarações
 const cad = document.querySelector("#imgCadeado")
     cad.addEventListener("click", trocarCadeado)
 const senha = document.querySelector("#pwSenha")
     senha.addEventListener("input", verificarRequisitos)
 const lista = document.querySelector("#uLista")
+const but = document.querySelector("#dvButton")
+    but.addEventListener("click", enviarAlerta)
+const erro = document.querySelector("#dvAlerta")

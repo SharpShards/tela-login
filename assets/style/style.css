@@ -6,6 +6,7 @@
     --cinP: #191919;
     --cinC: #202020;
     --letras: #FFF;
+    --erro: #e03232;
 }
 
 *{
@@ -103,9 +104,33 @@ form{
 }
 
 #dvTítulo h1{
-    color: var(--sec);
+    color: var(--prin);
     font-size: 4rem;
     font-weight: 500;
+}
+
+#dvAlerta{
+    display: none;
+
+    border: solid 3px var(--erro);
+    border-radius: 12px;
+
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+
+    flex-direction: column;
+}
+
+#dvAlerta p:first-child{
+    color: var(--erro);
+    font-size: 1.6rem;
+
+    margin-bottom: 10px;
+}
+
+#dvAlerta p:nth-child(2){
+    color: var(--erro);
+    font-size: 1.4rem;
 }
 
 #dvCampos{
@@ -183,7 +208,7 @@ form{
 }
 
 #dvRequisitos #uLista .liItem{
-    color: #e03232;
+    color: var(--erro);
     font-size: 1.2rem;
 
     margin-bottom: 10px;
