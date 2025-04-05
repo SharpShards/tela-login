@@ -21,10 +21,12 @@ function verificarRequisitos(){
         code = caractere.charCodeAt()
 
         if((code >= 65) && (code <= 90)){
+            lista.children[0].setAttribute("data-satisfeito", true)
             lista.children[0].style.color = "#32e069"
 
             break
         }else{
+            lista.children[0].setAttribute("data-satisfeito", false)
             lista.children[0].style.color = "#e03232"
         }
     }
@@ -38,10 +40,12 @@ function verificarRequisitos(){
         code = caractere.charCodeAt()
 
         if((code >= 97) && (code <= 122)){
+            lista.children[1].setAttribute("data-satisfeito", true)
             lista.children[1].style.color = "#32e069"
 
             break
         }else{
+            lista.children[1].setAttribute("data-satisfeito", false)
             lista.children[1].style.color = "#e03232"
         }
     }
@@ -57,34 +61,39 @@ function verificarRequisitos(){
         if(!((code >= 48) && (code <= 57))
            && !((code >= 65) && (code <= 90))
            && !((code >= 97) && (code <= 122)) ){
+            lista.children[2].setAttribute("data-satisfeito", true)
             lista.children[2].style.color = "#32e069"
-
-            console.log("Tem símbolo!")
 
             break
         }else{
+            lista.children[2].setAttribute("data-satisfeito", false)
             lista.children[2].style.color = "#e03232"
-
-            console.log("Não tem símbolo!")
         }
     }   
 
 
     // Quantidade de caracteres
     if(senha.value.length >= 8){
+        lista.children[3].setAttribute("data-satisfeito", true)
         lista.children[3].style.color = "#32e069"
     }else{
+        lista.children[3].setAttribute("data-satisfeito", false)
         lista.children[3].style.color = "#e03232"
     }
 
     // Bug
     // Quando tira o último caractere, os dois primeiros requisitos
-    // continuam verdes
+    // continuam verdes e satisfeitos
     if(senha.value.length == 0){
         lista.children[0].style.color = "#e03232"
         lista.children[1].style.color = "#e03232"
         lista.children[2].style.color = "#e03232"
         lista.children[3].style.color = "#e03232"
+
+        lista.children[0].setAttribute("data-satisfeito", false)
+        lista.children[1].setAttribute("data-satisfeito", false)
+        lista.children[2].setAttribute("data-satisfeito", false)
+        lista.children[3].setAttribute("data-satisfeito", false)
     }
 }
 
