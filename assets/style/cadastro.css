@@ -1,53 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-:root{
-    --prin: #db4906;
-    --sec: #eb672f;
-    --cinP: #191919;
-    --cinC: #202020;
-    --letras: #FFF;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-
-    font-family: 'Montserrat', sans-serif;
-
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62.5%;
-}
-
-html::-webkit-scrollbar{
-    width: 10px;
-    
-    background-color: var(--cinC);
-}
-
-html::-webkit-scrollbar-thumb{
-    background-color: var(--prin);
-}
-
-main{
-    display: flex;
-
-    min-height: 100vh;
-    max-height: fit-content;
-    width: 100%;
-
-    background-color: var(--cinP);
-
-    padding: 60px;
-
-    justify-content: center;
-    align-items: center;
-}
-
 form{
     height: fit-content;
     width: 600px;
@@ -386,6 +336,30 @@ form{
     font-size: 1.4rem;
 }
 
+#dvAlerta{
+    display: none;
+
+    border: solid 3px var(--erro);
+    border-radius: 12px;
+
+    margin: 20px 0px 0px 0px;
+    padding: 20px;
+    
+    flex-direction: column;
+}
+
+#dvAlerta p:first-child{
+    color: var(--erro);
+    font-size: 1.6rem;
+
+    margin-bottom: 10px;
+}
+
+#dvAlerta p:nth-child(2){
+    color: var(--erro);
+    font-size: 1.4rem;
+}
+
 #dvCampos #dvSenha{
     display: flex;
 
@@ -409,6 +383,23 @@ form{
 
 #dvCampos #dvSenha img:hover{
     cursor: pointer;
+}
+
+/* Só pra não desconfigurar outras coisas */
+#dvRequisitos{
+    padding: 1px
+}
+
+#dvRequisitos #uLista{
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+#dvRequisitos #uLista .liItem{
+    color: var(--erro);
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
 }
 
 #dvCampos #sctEstado{

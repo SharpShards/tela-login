@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="assets/style/cadastro.css">
     <link rel="icon" href="assets/client/logo.png">
+    <link rel="stylesheet" href="assets/style/padrao.css">
+    <link rel="stylesheet" href="assets/style/cadastro.css">
 
     <script src="assets/script/cadastro.js" defer></script>
     <script src="https://unpkg.com/imask" defer></script>
@@ -65,10 +66,24 @@
                 </div>                
                 <input type="tel" id="tlCel" name="tlCel" placeholder="(00) 00 90000-0000" autocomplete="off" maxlength="18">
                 
+                <div id="dvAlerta">
+                    <p>Erro!</p>
+                    <p></p>
+                </div>
+
                 <label for="pwSenha">Senha</label>
                 <div id="dvSenha">                    
                     <input type="password" id="pwSenha" name="pwSenha" autocomplete="off" maxlength="50">
-                    <img src="assets/icons/lock.png" alt="Cadeado">
+                    <img id="imgCadeado" src="assets/icons/lock.png" alt="Cadeado">
+                </div>
+
+                <div id="dvRequisitos">
+                    <ul id="uLista">
+                        <li class="liItem" data-satisfeito="false">Letra maiúscula.</li>
+                        <li class="liItem" data-satisfeito="false">Letra minúscula.</li>
+                        <li class="liItem" data-satisfeito="false">Símbolo.</li>
+                        <li class="liItem" data-satisfeito="false">8 caracteres</li>
+                    </ul>
                 </div>
 
                 <label for="sctEstado">Estado <span>(Opcional)</span></label>
@@ -208,7 +223,7 @@
                 </div>            
 
                 <div id="dvButtons">
-                    <input type="submit" id="sbCriar" name="sbCriar" class="btnButtons inpEx" value="Criar">
+                    <input type="button" id="sbCriar" name="sbCriar" class="btnButtons inpEx" value="Criar">
                     <input type="reset" id="rtApagar" name="rtApagar" class="btnButtons inpEx" value="Apagar">
                 </div>
 
