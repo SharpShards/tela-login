@@ -10,6 +10,7 @@
     <link rel="icon" href="assets/client/logo.png">
 
     <script src="assets/script/cadastro.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
 </head>
 <body>
     <main>
@@ -61,9 +62,8 @@
 
                 <div id="dvCelular">
                     <label for="tlCel">Celular</label>
-                    <label for="tlCel">Formato: (00) 00 90000-0000</label>
                 </div>                
-                <input type="tel" id="tlCel" name="tlCel" autocomplete="off" maxlength="18">
+                <input type="tel" id="tlCel" name="tlCel" placeholder="(00) 00 90000-0000" autocomplete="off" maxlength="18">
                 
                 <label for="pwSenha">Senha</label>
                 <div id="dvSenha">                    

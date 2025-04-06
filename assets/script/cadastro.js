@@ -32,6 +32,10 @@ function atualizarContador(){
     }
 }
 
+function formatarNumero(){ 
+    IMask(cel, {mask: "(00) 00 00000-0000"})
+}
+
 // Declarações
 const fun = document.querySelector("#dvFundoPreview")
 const prev = document.querySelector("#imgPreview")
@@ -42,3 +46,5 @@ const prevX = document.querySelector("#btnRemover")
 const desc = document.querySelector("#taDesc")
     desc.addEventListener("input", atualizarContador)
 const cont = document.querySelector("#pContagem")
+const cel = document.querySelector("#tlCel")
+    cel.addEventListener("input", formatarNumero)
