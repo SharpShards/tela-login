@@ -268,13 +268,20 @@ function atualizarRange(){
 }
 
 function confirmarCadastro(){
-    conf.style.opacity = 1
+    conf.style.display = "flex"
 
-    conf.classList.toggle("dvFundoConf")
+    // Para começar a animação depois do elemento estar visível
+    // Ele precisa estar invisível por padrão para não aparecer
+    // a animação do opacity assim que carrega a página 
+    setTimeout(function(){    
+        conf.style.opacity = 1
+    
+        conf.classList.toggle("dvFundoConf")
+    }, 200)
 
     setTimeout(function(){
         window.location.replace("../../index.html")
-    }, 1500)
+    }, 1700)
 }
 
 function apagarForm(){

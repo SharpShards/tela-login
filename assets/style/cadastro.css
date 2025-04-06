@@ -762,6 +762,8 @@ form{
 }
 
 #dvFundoConfirmacao{
+    display: none;
+    
     border: solid 3px #32e069;
     border-radius: 12px;
     
