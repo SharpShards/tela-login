@@ -332,7 +332,11 @@ form{
 #dvCampos input[type = datetime-local]::-webkit-calendar-picker-indicator,
 #dvCampos input[type = week]::-webkit-calendar-picker-indicator,
 #dvCampos input[type = month]::-webkit-calendar-picker-indicator{
-    background-image: url('assets/icons/calendar_l.png');
+    height: 30px;
+    width: 30px;
+
+    background-image: url("../icons/calendar_b.png");
+    background-size: 30px;
 }
 
 #dvCampos input[type = time]::-webkit-calendar-picker-indicator{
