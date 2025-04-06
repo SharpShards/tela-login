@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --prin: #db4906;
+    --sec: #eb672f;
+    --cinP: #191919;
+    --cinC: #202020;
+    --letras: #FFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html::-webkit-scrollbar{
+    width: 10px;
+    
+    background-color: var(--cinC);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--prin);
+}
+
+main{
+    display: flex;
+
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+
+    background-color: var(--cinP);
+
+    padding: 60px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    height: fit-content;
+    width: 600px;
+
+    background-color: var(--cinC);
+
+    border: 2px solid var(--prin);
+    border-radius: 24px;
+
+    padding: 40px;
+
+    flex-direction: column;
+}
+
+#dvLogo{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#dvLogo img{
+    height: 40px;
+    width: 40px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#dvLogo p{
+    display: flex;
+
+    color: var(--prin);
+    font-size: 3rem;
+    font-weight: 600;
+
+    text-align: center;
+
+    align-items: center;
+}
+
+#dvTitulo h1{
+    color: var(--sec);
+    font-size: 4rem;
+    font-weight: 500;
+
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+#dvCampos{
+    display: flex;
+
+    height: fit-content;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+#dvCampos .dvH2{
+    display: flex;
+
+    height: 2px;
+    width: 100%;
+
+    background-color: var(--prin);
+
+    margin-bottom: 20px;
+    margin-top: 60px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#dvCampos .dvH2 h2{
+    background-color: var(--cinC);
+
+    color: var(--sec);
+    font-size: 2.4rem;
+    font-weight: 500;    
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#dvCampos label{
+    color: var(--sec);
+    font-size: 2rem;
+    font-weight: 500;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#dvCampos label span{
+    color: #666464;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+#dvCampos input,
+#dvCampos textarea{
+    display: flex;
+
+    height: fit-content;
+    width: 100%;
+
+    background-color: transparent;
+
+    color: var(--letras);
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    border: 2px solid var(--sec);
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dvCampos input:not(.inpEx):focus,
+#dvCampos textarea:focus{
+    background-color: var(--prin);
+    
+    border: 2px solid var(--prin);
+
+    box-shadow: 0 0 20px 5px var(--prin);
+}
+
+#dvCampos #dvFundoPreview{
+    display: none;
+
+    height: 200px;
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#dvCampos #dvFundoPreview #imgPreview{
+    display: block; 
+
+    height: 200px;
+    width: 200px;
+
+    object-fit: cover;
+
+    border-radius: 50%;         
+}
+
+#dvCampos #dvFundoFoto{
+    display: flex;
+
+    height: fit-content;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#dvCampos #dvFundoFoto #flFoto{
+    width: 200px;
+
+    color: transparent;
+    
+    border: none;
+    border-radius: 0px;
+
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+#dvCampos #dvFundoFoto #flFoto::-webkit-file-upload-button{
+    height: 50px;
+    width: 200px;
+
+    background-color: transparent;
+
+    color: var(--letras);
+    font-size: 1.6rem;
+
+    border: 2px solid var(--sec);
+    border-radius: 7px;
+
+    margin-right: 20px;
+    
+    padding: 15px 20px 15px 20px;
+}
+
+#dvCampos #flFoto:hover,
+#dvCampos #flFoto::-webkit-file-upload-button:hover{
+    cursor: pointer;
+}
+
+#dvCampos #flFoto:focus{
+    background-color: transparent;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+#dvCampos #dvFundoFoto #btnRemover{
+    display: flex;
+
+    height: 50px;
+    width: 50px;
+
+    background-color: transparent;
+
+    border: solid 2px var(--sec);
+    border-radius: 6px;
+
+    margin-left: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#dvCampos #dvFundoFoto #btnRemover:hover{
+    cursor: pointer;
+}
+
+#dvCampos #dvFundoFoto #btnRemover #imgRemover{
+    height: 20px;
+}
+
+#dvCampos #clCor{
+    height: 200px;
+    width: 200px;
+
+    border-radius: 12px;
+
+    margin-inline: auto;
+
+    padding: 10px;
+}
+
+#dvCampos #clCor:hover{
+    cursor: pointer;
+}
+
+#dvCampos #clCor::-webkit-color-swatch{
+    border-radius: 12px;
+
+    border-color: transparent;
+}
+
+#dvCampos #shPadri::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+
+    height: 20px;
+    width: 20px;
+
+    background-image: url("assets/icons/x.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#dvCampos #shPadri::-webkit-search-cancel-button:hover{
+    cursor: pointer;
+}
+
+#dvCampos input[type = date]:hover,
+#dvCampos input[type = time]:hover,
+#dvCampos input[type = datetime-local]:hover,
+#dvCampos input[type = week]:hover,
+#dvCampos input[type = month]:hover{
+    cursor: text;
+}
+
+#dvCampos input[type = date]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = datetime-local]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = week]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = month]::-webkit-calendar-picker-indicator{
+    background-image: url('assets/icons/calendar_l.png');
+}
+
+#dvCampos input[type = time]::-webkit-calendar-picker-indicator{
+    background-image: url("assets/icons/clock_l.png");
+}
+
+#dvCampos input[type = date]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = time]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = datetime-local]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = week]::-webkit-calendar-picker-indicator,
+#dvCampos input[type = month]::-webkit-calendar-picker-indicator{
+    margin-right: 12px;
+
+    position: absolute;
+    right: 0;
+}
+
+#dvCampos input[type = date]::-webkit-calendar-picker-indicator:hover,
+#dvCampos input[type = time]::-webkit-calendar-picker-indicator:hover,
+#dvCampos input[type = datetime-local]::-webkit-calendar-picker-indicator:hover,
+#dvCampos input[type = week]::-webkit-calendar-picker-indicator:hover,
+#dvCampos input[type = month]::-webkit-calendar-picker-indicator:hover{
+    cursor: pointer;
+}
+
+#dvCampos input[type = date]:focus::-webkit-calendar-picker-indicator,
+#dvCampos input[type = datetime-local]:focus::-webkit-calendar-picker-indicator,
+#dvCampos input[type = week]:focus::-webkit-calendar-picker-indicator,
+#dvCampos input[type = month]:focus::-webkit-calendar-picker-indicator{
+    background-image: url('assets/icons/calendar_b.png');
+}
+
+#dvCampos input[type = time]:focus::-webkit-calendar-picker-indicator{
+    background-image: url('assets/icons/clock_b.png');
+}
+
+#dvCampos #dvCelular{
+    display: flex;
+
+    height: fit-content;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dvCampos #dvCelular label:last-child{
+    font-size: 1.4rem;
+}
+
+#dvCampos #dvSenha{
+    display: flex;
+
+    margin-bottom: 20px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dvCampos #dvSenha input{
+    flex: 1;
+
+    margin: 0;
+}
+
+#dvCampos #dvSenha img{
+    height: 30px;
+
+    margin-left: 20px;
+}
+
+#dvCampos #dvSenha img:hover{
+    cursor: pointer;
+}
+
+#dvCampos #sctEstado{
+    appearance: none;
+
+    height: 60px;
+
+    background-color: transparent;
+
+    background-image: url("assets/icons/seta.png");
+    background-size: 30px;
+    background-position: center right 20px;
+    background-repeat: no-repeat;
+
+    color: var(--letras);
+    font-size: 1.8rem;
+
+    border: 2px solid var(--sec);
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    padding: 10px;
+    padding-right: 20px;
+}
+
+#dvCampos #sctEstado:hover{
+    cursor: pointer;
+}
+
+#dvCampos #sctEstado option{
+    background-color: var(--cinP);
+    
+    color: var(--letras);
+    font-size: 2rem;
+}
+
+#dvCampos #dvProgress{
+    display: flex;
+
+    margin-bottom: 20px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dvCampos #dvProgress .dvNum{
+    display: flex;
+
+    width: 100px;
+
+    border: 2px solid var(--sec);
+    border-radius: 12px;
+}
+
+#dvCampos #dvProgress .dvNum input[type = number]{
+    width: 70px;
+    
+    border: none;
+
+    margin: 0;
+
+    padding-right: 0;
+}
+
+#dvCampos #dvProgress .dvNum input[type = number]:focus{
+    background-color: transparent;
+    
+    border: none;
+
+    box-shadow: none;
+}
+
+#dvCampos #dvProgress .dvNum input[type = number]::-webkit-inner-spin-button{
+    display: none;
+}
+
+#dvCampos #dvProgress .dvNum .dvSetas{
+    display: flex;    
+
+    width: 30px;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dvCampos #dvProgress .dvNum .dvSetas div{
+    flex: 1;
+    display: flex;
+
+    width: 100%;
+
+    color: var(--sec);
+    font-size: 1.4rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#dvCampos #dvProgress .dvNum .dvSetas div:first-child{
+    border-top-right-radius: 7px;
+}
+
+#dvCampos #dvProgress .dvNum .dvSetas div:last-child{
+    border-bottom-right-radius: 7px;
+}
+
+#dvCampos #dvProgress .dvNum .dvSetas div:hover{
+    cursor: pointer;
+
+    background-color: var(--prin);
+
+    color: var(--letras);
+}
+
+#dvCampos #dvProgress #pgProg{
+    height: 22px;
+    width: 200px;
+}
+
+#dvCampos #dvProgress #pgProg::-webkit-progress-inner-element{
+    border-radius: 30px;
+    border: 3px solid var(--sec);
+}
+
+#dvCampos #dvProgress #pgProg::-webkit-progress-bar{
+    background-color: transparent;
+}
+
+#dvCampos #dvProgress #pgProg::-webkit-progress-value{
+    background-color: var(--sec);
+
+    border-radius: 30px;
+}
+
+#dvCampos .dvFreq{
+    display: flex;
+    
+    margin: 10px;
+
+    align-items: center;
+}
+
+#dvCampos .dvFreq input{
+    appearance: none;
+
+    height: 20px;
+    width: 20px;
+    
+    border: 7px solid transparent;
+    border-radius: 50px;
+
+    margin: 0;
+    margin-right: 10px;
+
+    padding: 0;
+
+    outline: 2px solid var(--prin);
+}
+
+#dvCampos .dvFreq input:hover{
+    cursor: pointer;
+}
+
+#dvCampos .dvFreq input:checked{
+    background-color: var(--prin);
+
+    border-color: var(--cinC);
+}
+
+#dvCampos .dvFreq label{
+    font-size: 1.6rem;
+
+    margin: 0;
+}
+
+#dvCampos #rgDific{
+    appearance: none;
+    
+    border: none;
+
+    padding: 0;
+}
+
+#dvCampos #rgDific::-webkit-slider-runnable-track{
+    height: 5px;
+    width: 100%;
+
+    background-color: var(--prin);
+
+    border-radius: 10px;    
+}
+
+#dvCampos #rgDific::-webkit-slider-thumb{
+    appearance: none;
+
+    height: 20px;
+    width: 20px;
+
+    background-color: var(--cinC);
+
+    border: 2px solid var(--prin);
+    border-radius: 50%;
+
+    margin-top: -6px;
+}
+
+#dvCampos #rgDific::-webkit-slider-thumb:hover{
+    cursor: pointer;
+}
+
+#dvCampos #dvDific{
+    display: flex;
+
+    padding-right: 3px;
+    padding-left: 3px;
+
+    justify-content: space-between;
+}
+
+#dvCampos #dvDific p{
+    color: var(--sec);
+    font-size: 1.6rem;
+}
+
+#dvCampos .dvSin{
+    display: flex;    
+
+    margin-bottom: 10px;
+
+    align-items: center;
+}
+
+#dvCampos .dvSin input{
+    appearance: none;
+
+    height: 20px;
+    width: 20px;
+
+    border-radius: 2px;
+    
+    margin: 0;
+
+    padding: 0;
+}
+
+#dvCampos .dvSin input:hover{
+    cursor: pointer;
+}
+
+#dvCampos .dvSin input:checked{
+    background-color: var(--prin);
+
+    background-image: url("assets/icons/check.png");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-color: var(--prin);
+}
+
+#dvCampos .dvSin label{
+    font-size: 1.6rem;
+    
+    margin: 0;
+    margin-left: 10px;
+}
+
+#dvCampos #dvDesc{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dvCampos #dvDesc p{
+    color: var(--sec);
+    font-size: 1.6rem;
+}
+
+#dvCampos #taDesc{
+    resize: none;
+
+    padding-right: 10px;
+}
+
+#dvCampos #taDesc::-webkit-scrollbar{
+    width: 10px;    
+}
+
+#dvCampos #taDesc::-webkit-scrollbar-track{
+    background-color: transparent;
+
+    border-radius: 12px;
+}
+
+#dvCampos #taDesc::-webkit-scrollbar-thumb{
+    background-color: var(--sec);
+
+    border-radius: 12px;
+}
+
+#dvCampos #dvButtons{
+    display: flex;
+
+    margin-top: 40px;
+
+    justify-content: space-between;
+}
+
+#dvCampos #dvButtons input{
+    display: flex;
+
+    width: 200px;
+
+    text-align: center;
+    
+    margin: 0;
+
+    justify-content: center;
+}
+
+#dvCampos #dvButtons input:hover{
+    cursor: pointer;
+
+    background-color: var(--prin);
+
+    border: 2px solid var(--prin);
+
+    box-shadow: 0 0 20px 5px var(--prin);
+}
+
+#pLogin{
+    width: 100%;
+
+    color: var(--letras);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+#pLogin span:hover{
+    color: var(--sec);
+
+    cursor: pointer;
+}
+
+#pLogin #aLogin{
+    color: var(--letras);
+
+    text-decoration: none;
+}
+
+#dvCreditos{
+    display: flex;
+    display: none;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #000;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#dvCreditos img{
+    width: 200px;
+}
+
+@media(max-width: 700px){
+    main{
+        padding: 10px;
+    }
+
+    form{
+        width: 100%;
+
+        background-color: transparent;
+
+        border-color: transparent;
+    }
+
+    #dvCampos .dvH2 h2{
+        background-color: var(--cinP);
+    }
+}
+
+@media(max-width: 550px){
+    html{
+        font-size: 50%;
+    }
+
+    #dvCampos #dvProgress{
+        height: 200px;
+
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #dvCampos #dvCelular{
+        flex-direction: column;
+        align-items: start;
+    }
+    #dvCampos #dvCelular label:last-child{
+        margin-top: 0;
+    }
+
+    #dvCampos #dvButtons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dvCampos #dvButtons input:first-child{
+        margin-bottom: 20px;
+    }
+}

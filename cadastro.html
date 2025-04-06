@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Crie Seu Perfil | Orange Points</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/style/cadastro.css">
+    <link rel="icon" href="assets/client/logo.png">
+
+    <script src="assets/script/cadastro.js" defer></script>
+</head>
+<body>
+    <main>
+        <form method="post" action="">
+            <div id="dvLogo">
+                <p>ORANGE</p>
+                <img src="assets/client/logo.png" alt="Logo">
+                <p>POINTS</p>
+            </div>
+
+            <div id="dvTitulo">
+                <h1>Crie seu perfil!</h1>
+            </div>      
+            
+            <div id="dvCampos">
+                <div class="dvH2">
+                    <h2>Dados Pessoais</h2>
+                </div>
+
+                <label for="flFoto">Foto De Perfil</label>
+                <div id="dvFundoPreview">
+                    <img id="imgPreview" alt="Imagem de perfil">
+                </div>
+                <div id="dvFundoFoto">
+                    <input type="file" id="flFoto" name="flFoto" accept="image/*">
+                    
+                    <button id="btnRemover" type="button">
+                        <img id="imgRemover" src="assets/icons/x.png" alt="Remover imagem">
+                    </button>
+                </div>
+    
+                <label for="txtNome">Nome</label>
+                <input type="text" id="txtNome" name="txtNome" autocomplete="off" maxlength="200">
+    
+                <label for="txtSobre">Sobrenome</label>
+                <input type="text" name="txtSobre" id="txtSobre" autocomplete="off" maxlength="200">
+
+                <div id="dvDesc">
+                    <label for="taDesc">Descrição <span>(Opcional)</span></label>
+                    <p>000/500</p>
+                </div>
+                <textarea name="taDesc" id="taDesc" cols="30" rows="10" maxlength="500"></textarea>
+    
+                <label for="dtData">Data De Nascimento</label>
+                <input type="date" name="dtData" id="dtData">
+
+                <label for="emEmail">Email</label>
+                <input type="email" id="emEmail" name="emEmail" autocomplete="off" maxlength="200">
+
+                <div id="dvCelular">
+                    <label for="tlCel">Celular</label>
+                    <label for="tlCel">Formato: (00) 00 90000-0000</label>
+                </div>                
+                <input type="tel" id="tlCel" name="tlCel" autocomplete="off" maxlength="18">
+                
+                <label for="pwSenha">Senha</label>
+                <div id="dvSenha">                    
+                    <input type="password" id="pwSenha" name="pwSenha" autocomplete="off" maxlength="50">
+                    <img src="assets/icons/lock.png" alt="Cadeado">
+                </div>
+
+                <label for="sctEstado">Estado <span>(Opcional)</span></label>
+                <select name="sctEstado" id="sctEstado">
+                    <option value="0" selected>Não informar</option>
+                    <option value="1">AC</option>
+                    <option value="2">AL</option>
+                    <option value="3">AP</option>
+                    <option value="4">AM</option>
+                    <option value="5">BA</option>
+                    <option value="6">CE</option>
+                    <option value="7">ES</option>
+                    <option value="8">GO</option>
+                    <option value="9">MA</option>
+                    <option value="10">MT</option>
+                    <option value="11">MS</option>
+                    <option value="12">MG</option>
+                    <option value="13">PA</option>
+                    <option value="14">PB</option>
+                    <option value="15">PR</option>
+                    <option value="16">PE</option>
+                    <option value="17">PI</option>
+                    <option value="18">RJ</option>
+                    <option value="19">RN</option>
+                    <option value="20">RS</option>
+                    <option value="21">RO</option>
+                    <option value="22">RR</option>
+                    <option value="23">SC</option>
+                    <option value="24">SP</option>
+                    <option value="25">SE</option>
+                    <option value="26">TO</option>
+                    <option value="27">DF</option>
+                </select>
+                
+                <label for="shPadri">Cidade <span>(Opcional)</span></label>
+                <input type="search" id="shPadri" name="shPadri" maxlength="50" autocomplete="off">
+
+                <label for="urlLink">Link Perfil <span>(Opcional)</span></label>
+                <input type="url" id="urlLink" name="urlLink" maxlength="200" placeholder="https://www.nome_orange_point.com.br">
+ 
+                <label for="clCor">Cor Favorita <span>(Opcional)</span></label>
+                <input type="color" id="clCor" name="clCor" class="inpEx" value="#eb672f">
+
+                <div class="dvH2">
+                    <h2>Períodos</h2>
+                </div>                
+
+                <label for="dtDiaC">Começo</label>
+                <input type="datetime-local" id="dtDiaC" name="dtDiaC">
+
+                <label for="dtDiaF">Fim</label>
+                <input type="datetime-local" id="dtDiaF" name="dtDiaF">
+
+                <label for="tmHora">Horário Padrão</label>
+                <input type="time" id="tmHora" name="tmHora" value="00:00">
+
+                <label for="wSem">Semana Atual</label>
+                <input type="week" id="wSem" name="wSem">
+
+                <label for="mMes">Mês Atual</label>
+                <input type="month" id="mMes" name="mMes"> 
+                
+                <div class="dvH2">
+                    <h2>Estatísticas</h2>
+                </div>                              
+
+                <label for="dvNum">Atual X Total</label>
+                <div id="dvProgress">
+                    <div class="dvNum">
+                        <input type="number" id="nbAtual" name="nbAtual" value="25">
+                        <div class="dvSetas">
+                            <div class="dvUp">▲</div>
+                            <div class="dvDown">▼</div>
+                        </div>
+                    </div>  
+                    
+                    <progress id="pgProg" name="pgProg" value="25" max="100"></progress>
+                    
+                    <div class="dvNum">
+                        <input type="number" id="nbTotal" name="nbTotal" value="100">
+                        <div class="dvSetas">
+                            <div class="dvUp">▲</div>
+                            <div class="dvDown">▼</div>
+                        </div>
+                    </div>  
+                </div>
+
+                <label>Frequência</label>
+                <div class="dvFreq">
+                    <input type="radio" id="rdFreq1" name="rdFreq" class="rdReca inpEx" value="0">
+                    <label for="rdFreq1">0</label>
+                </div>  
+                <div class="dvFreq">
+                    <input type="radio" id="rdFreq2" name="rdFreq" class="rdReca inpEx" value="1 a 3">
+                    <label for="rdFreq2">2 a 3</label>
+                </div>              
+                <div class="dvFreq">
+                    <input type="radio" id="rdFreq3" name="rdFreq" class="rdReca inpEx" value="4 a 9">
+                    <label for="rdFreq3">4 a 9</label>
+                </div>
+                <div class="dvFreq">
+                    <input type="radio" id="rdFreq4" name="rdFreq" class="rdReca inpEx" value="10 a 15">
+                    <label for="rdFreq4">10 a 15</label>
+                </div>
+                <div class="dvFreq">
+                    <input type="radio" id="rdFreq5" name="rdFreq" class="rdReca inpEx" value="15+">
+                    <label for="rdFreq5">+15</label>
+                </div>
+                
+                <label for="rgDific">Nível De Dificuldade</label>
+                <input type="range" id="rgDific" name="rgDific" class="inpEx" min="0" max="10">
+                <div id="dvDific">
+                    <p>0</p>
+                    <p>10</p>
+                </div>
+
+                <label>Sentimentos</label>
+                <div class="dvSin">
+                    <input type="checkbox" id="cbSin1" class="inpEx" name="cbSin1" value="Felicidade">
+                    <label for="cbSin1">Felicidade</label>
+                </div>
+                <div class="dvSin">
+                    <input type="checkbox" id="cbSin2" class="inpEx" name="cbSin2" value="Medo">
+                    <label for="cbSin2">Medo</label>
+                </div>
+                <div class="dvSin">
+                    <input type="checkbox" id="cbSin3" class="inpEx" name="cbSin3" value="Tristeza">
+                    <label for="cbSin3">Tristeza</label>
+                </div>
+                <div class="dvSin">
+                    <input type="checkbox" id="cbSin4" class="inpEx" name="cbSin4" value="Raiva">
+                    <label for="cbSin4">Raiva</label>
+                </div>
+                <div class="dvSin">
+                    <input type="checkbox" id="cbSin5" class="inpEx" name="cbSin5" value="Nojo">
+                    <label for="cbSin5">Nojo</label>
+                </div>            
+
+                <div id="dvButtons">
+                    <input type="submit" id="sbCriar" name="sbCriar" class="btnButtons inpEx" value="Criar">
+                    <input type="reset" id="rtApagar" name="rtApagar" class="btnButtons inpEx" value="Apagar">
+                </div>
+
+                <p id="pLogin">Já possui uma conta? <a id="aLogin" href="index.html"><span>Faça Login!</span></a></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
