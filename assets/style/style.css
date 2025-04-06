@@ -271,7 +271,7 @@ form{
     transition: transform 80ms linear;
 }
 
-#pCadas {
+#pCadas{
     width: 100%;
 
     color: var(--letras);
@@ -287,6 +287,12 @@ form{
     color: var(--prin);
 
     cursor: pointer;
+}
+
+#pCadas #aCadas{
+    color: var(--letras);
+
+    text-decoration: none;
 }
 
 #dvCreditos{
