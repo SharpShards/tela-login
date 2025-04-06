@@ -134,6 +134,10 @@ form{
     box-shadow: 0 0 20px 5px var(--prin);
 }
 
+#dvCampos textarea:focus::-webkit-scrollbar-thumb:hover{
+    cursor: pointer;
+}
+
 #dvCampos #dvFundoPreview{
     display: none;
 
@@ -763,7 +767,7 @@ form{
 
 #dvFundoConfirmacao{
     display: none;
-    
+
     border: solid 3px #32e069;
     border-radius: 12px;
     
