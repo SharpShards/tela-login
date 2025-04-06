@@ -200,6 +200,77 @@ function aumentarProgressoTotal(){
     pgProg.max = numTot.value
 }
 
+function atualizarRange(){
+    switch(range.value){
+        case "0":
+            point.style.display = "none"
+            point.style.marginLeft = 0
+            point.style.marginRight = 0
+            point.innerText = "0"
+            break
+        case "1":
+            point.style.display = "block"
+            point.style.marginLeft = 0
+            point.style.marginRight = (range.scrollWidth * 0.76) + "px"
+            point.innerText = "1"
+            break
+        case "2":
+            point.style.display = "block"
+            point.style.marginLeft = 0
+            point.style.marginRight = (range.scrollWidth * 0.57) + "px"
+            point.innerText = "2"
+            break
+        case "3":
+            point.style.display = "block"
+            point.style.marginLeft = 0
+            point.style.marginRight = (range.scrollWidth * 0.37) + "px"
+            point.innerText = "3"
+            break
+        case "4":
+            point.style.display = "block"
+            point.style.marginLeft = 0
+            point.style.marginRight = (range.scrollWidth * 0.18) + "px"
+            point.innerText = "4"
+            break
+        case "5":
+            point.style.display = "block"
+            point.style.marginLeft = 0
+            point.style.marginRight = 0
+            point.innerText = "5"
+            break
+        case "6":
+            point.style.display = "block"
+            point.style.marginRight = 0
+            point.style.marginLeft = (range.scrollWidth * 0.2) + "px"
+            point.innerText = "6"
+            break
+        case "7":
+            point.style.display = "block"
+            point.style.marginRight = 0
+            point.style.marginLeft = (range.scrollWidth * 0.4) + "px"
+            point.innerText = "7"
+            break
+        case "8":
+            point.style.display = "block"
+            point.style.marginRight = 0
+            point.style.marginLeft = (range.scrollWidth * 0.58) + "px"
+            point.innerText = "8"
+            break
+        case "9":
+            point.style.display = "block"
+            point.style.marginRight = 0
+            point.style.marginLeft = (range.scrollWidth * 0.78) + "px"
+            point.innerText = "9"
+            break
+        case "10":
+            point.style.display = "none"
+            point.style.marginRight = 0
+            point.style.marginLeft = (range.scrollWidth * 0.8) + "px"
+            point.innerText = "10"
+            break
+    }
+}
+
 // Declarações
 const fun = document.querySelector("#dvFundoPreview")
 const prev = document.querySelector("#imgPreview")
@@ -233,3 +304,6 @@ const upTot = document.querySelector("#dvUpTot")
 const downTot = document.querySelector("#dvDownTot")
     downTot.addEventListener("click", diminuirTotal)
 const prog = document.querySelector("#pgProg")
+const range = document.querySelector("#rgDific")
+    range.addEventListener("click", atualizarRange)
+const point = document.querySelector("#pRangeAtual")
