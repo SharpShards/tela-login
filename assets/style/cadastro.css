@@ -840,3 +840,23 @@ form{
         margin-bottom: 20px;
     }
 }
+
+@media(max-width: 375px){
+    #dvCampos #dvFundoFoto #flFoto{
+        width: 100%;
+    }
+
+    #dvCampos #dvFundoFoto #flFoto::-webkit-file-upload-button{
+        width: 100%;
+    }
+
+    #dvCampos #dvFundoPreview{    
+        height: 150px;
+        width: 100%;
+    }
+    
+    #dvCampos #dvFundoPreview #imgPreview{   
+        height: 150px;
+        width: 150px;        
+    }
+}
