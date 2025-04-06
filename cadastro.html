@@ -153,20 +153,20 @@
                 <label for="dvNum">Atual X Total</label>
                 <div id="dvProgress">
                     <div class="dvNum">
-                        <input type="number" id="nbAtual" name="nbAtual" value="25">
+                        <input type="number" id="nbAtual" name="nbAtual" value="25" maxlength="3">
                         <div class="dvSetas">
-                            <div class="dvUp">▲</div>
-                            <div class="dvDown">▼</div>
+                            <div id="dvUpAtu" class="dvUp">▲</div>
+                            <div id="dvDownAtu" class="dvDown">▼</div>
                         </div>
                     </div>  
                     
                     <progress id="pgProg" name="pgProg" value="25" max="100"></progress>
                     
                     <div class="dvNum">
-                        <input type="number" id="nbTotal" name="nbTotal" value="100">
+                        <input type="number" id="nbTotal" name="nbTotal" value="100" maxlength="3">
                         <div class="dvSetas">
-                            <div class="dvUp">▲</div>
-                            <div class="dvDown">▼</div>
+                            <div id="dvUpTot" class="dvUp">▲</div>
+                            <div id="dvDownTot" class="dvDown">▼</div>
                         </div>
                     </div>  
                 </div>

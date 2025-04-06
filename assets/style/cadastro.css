@@ -453,18 +453,18 @@ form{
 #dvCampos #dvProgress .dvNum{
     display: flex;
 
-    width: 100px;
+    width: fit-content;
 
     border: 2px solid var(--sec);
     border-radius: 12px;
 }
 
 #dvCampos #dvProgress .dvNum input[type = number]{
-    width: 70px;
+    width: 50px;
     
     border: none;
 
-    margin: 0;
+    margin: 6px 4px 6px 6px;
 
     padding-right: 0;
 }

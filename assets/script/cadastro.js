@@ -164,6 +164,42 @@ function confirmarCadastro(){
     console.log("Fazer ainda")
 }
 
+function interrompeDigitacao(e){
+    e.preventDefault()
+}
+
+function aumentarAtual(){
+    numAtu.value = parseInt(numAtu.value) + 1
+
+    aumentarProgressoAtual()
+}
+
+function diminuirAtual(){
+    numAtu.value = parseInt(numAtu.value) - 1
+
+    aumentarProgressoAtual()
+}
+
+function aumentarTotal(){
+    numTot.value = parseInt(numTot.value) + 1
+
+    aumentarProgressoTotal()
+}
+
+function diminuirTotal(){
+    numTot.value = parseInt(numTot.value) - 1
+
+    aumentarProgressoTotal()
+}
+
+function aumentarProgressoAtual(){
+    pgProg.value = numAtu.value
+}
+
+function aumentarProgressoTotal(){
+    pgProg.max = numTot.value
+}
+
 // Declarações
 const fun = document.querySelector("#dvFundoPreview")
 const prev = document.querySelector("#imgPreview")
@@ -184,3 +220,16 @@ const lista = document.querySelector("#uLista")
 const env = document.querySelector("#sbCriar")
     env.addEventListener("click", enviarAlerta)
 const erro = document.querySelector("#dvAlerta")
+const numAtu = document.querySelector("#nbAtual")
+    numAtu.addEventListener("keydown", interrompeDigitacao)
+const upAtu = document.querySelector("#dvUpAtu")
+    upAtu.addEventListener("click", aumentarAtual)
+const downAtu = document.querySelector("#dvDownAtu")
+    downAtu.addEventListener("click", diminuirAtual)
+const numTot = document.querySelector("#nbTotal")
+    numTot.addEventListener("keydown", interrompeDigitacao)   
+const upTot = document.querySelector("#dvUpTot")
+    upTot.addEventListener("click", aumentarTotal)
+const downTot = document.querySelector("#dvDownTot")
+    downTot.addEventListener("click", diminuirTotal)
+const prog = document.querySelector("#pgProg")
