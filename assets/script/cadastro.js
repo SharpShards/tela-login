@@ -161,7 +161,13 @@ function enviarAlerta(e){
 }
 
 function confirmarCadastro(){
-    console.log("Fazer ainda")
+    conf.style.opacity = 1
+
+    conf.classList.toggle("dvFundoConf")
+
+    setTimeout(function(){
+        window.location.replace("../../index.html")
+    }, 1500)
 }
 
 function interrompeDigitacao(e){
@@ -307,3 +313,4 @@ const prog = document.querySelector("#pgProg")
 const range = document.querySelector("#rgDific")
     range.addEventListener("click", atualizarRange)
 const point = document.querySelector("#pRangeAtual")
+const conf = document.querySelector("#dvFundoConfirmacao")

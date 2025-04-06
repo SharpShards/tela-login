@@ -761,25 +761,30 @@ form{
     text-decoration: none;
 }
 
-#dvCreditos{
-    display: flex;
-    display: none;
-
-    height: 100vh;
-    width: 100vw;
-
-    background-color: #000;
-
+#dvFundoConfirmacao{
+    border: solid 3px #32e069;
+    border-radius: 12px;
+    
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 40px;
+    right: 20px;
 
-    justify-content: center;
-    align-items: center;
+    opacity: 0;
+
+    transition: opacity 500ms linear,
+                transform 1000ms ease;
+
+    padding: 20px;
 }
 
-#dvCreditos img{
-    width: 200px;
+#dvFundoConfirmacao p{
+    color: #32e069;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.dvFundoConf{
+    transform: translateY(-20px);
 }
 
 @media(max-width: 700px){
