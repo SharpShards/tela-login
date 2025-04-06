@@ -260,7 +260,7 @@ form{
     height: 20px;
     width: 20px;
 
-    background-image: url("assets/icons/x.png");
+    background-image: url("../icons/x.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -282,15 +282,19 @@ form{
 #dvCampos input[type = datetime-local]::-webkit-calendar-picker-indicator,
 #dvCampos input[type = week]::-webkit-calendar-picker-indicator,
 #dvCampos input[type = month]::-webkit-calendar-picker-indicator{
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 
     background-image: url("../icons/calendar_b.png");
-    background-size: 30px;
+    background-size: 25px;
 }
 
 #dvCampos input[type = time]::-webkit-calendar-picker-indicator{
-    background-image: url("assets/icons/clock_l.png");
+    height: 25px;
+    width: 25px;
+
+    background-image: url("../icons/clock_b.png");
+    background-size: 25px;
 }
 
 #dvCampos input[type = date]::-webkit-calendar-picker-indicator,
@@ -316,11 +320,11 @@ form{
 #dvCampos input[type = datetime-local]:focus::-webkit-calendar-picker-indicator,
 #dvCampos input[type = week]:focus::-webkit-calendar-picker-indicator,
 #dvCampos input[type = month]:focus::-webkit-calendar-picker-indicator{
-    background-image: url('assets/icons/calendar_b.png');
+    background-image: url('../icons/calendar_b.png');
 }
 
 #dvCampos input[type = time]:focus::-webkit-calendar-picker-indicator{
-    background-image: url('assets/icons/clock_b.png');
+    background-image: url('../icons/clock_b.png');
 }
 
 #dvCampos #dvCelular{
@@ -344,7 +348,7 @@ form{
 
     margin: 20px 0px 0px 0px;
     padding: 20px;
-    
+
     flex-direction: column;
 }
 
@@ -409,7 +413,7 @@ form{
 
     background-color: transparent;
 
-    background-image: url("assets/icons/seta.png");
+    background-image: url("../icons/seta.png");
     background-size: 30px;
     background-position: center right 20px;
     background-repeat: no-repeat;
@@ -654,7 +658,7 @@ form{
 #dvCampos .dvSin input:checked{
     background-color: var(--prin);
 
-    background-image: url("assets/icons/check.png");
+    background-image: url("../icons/check.png");
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
