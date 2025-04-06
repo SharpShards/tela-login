@@ -16,8 +16,20 @@ function carregarImagem(){
 
 function removerImagem(){
     prev.setAttribute("src", "")
-    
+
     fun.style.display = "none"
+}
+
+function atualizarContador(){
+    quant = desc.value.length
+    
+    if(quant < 10){
+        cont.innerText = "00" + desc.value.length + "/500"
+    }else if(quant < 100){
+        cont.innerText = "0" + desc.value.length + "/500"
+    }else{
+        cont.innerText = desc.value.length + "/500"
+    }
 }
 
 // Declarações
@@ -27,3 +39,6 @@ const but = document.querySelector("#flFoto")
     but.addEventListener("change", carregarImagem)
 const prevX = document.querySelector("#btnRemover")
     prevX.addEventListener("click", removerImagem)
+const desc = document.querySelector("#taDesc")
+    desc.addEventListener("input", atualizarContador)
+const cont = document.querySelector("#pContagem")
