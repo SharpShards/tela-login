@@ -160,16 +160,6 @@ function enviarAlerta(e){
     e.preventDefault()
 }
 
-function confirmarCadastro(){
-    conf.style.opacity = 1
-
-    conf.classList.toggle("dvFundoConf")
-
-    setTimeout(function(){
-        window.location.replace("../../index.html")
-    }, 1500)
-}
-
 function interrompeDigitacao(e){
     e.preventDefault()
 }
@@ -277,6 +267,56 @@ function atualizarRange(){
     }
 }
 
+function confirmarCadastro(){
+    conf.style.opacity = 1
+
+    conf.classList.toggle("dvFundoConf")
+
+    setTimeout(function(){
+        window.location.replace("../../index.html")
+    }, 1500)
+}
+
+function apagarForm(){
+    // Remover foto de perfil
+    removerImagem()
+
+    // Zerar contador
+    cont.innerText = "000/500"
+
+    // Volta senha para modo senha
+    cad.setAttribute("src", "assets/icons/lock.png")
+
+    senha.setAttribute("type", "password")
+
+    // Torna todos os requisitos false
+    lista.children[0].style.color = "#e03232"
+    lista.children[1].style.color = "#e03232"
+    lista.children[2].style.color = "#e03232"
+    lista.children[3].style.color = "#e03232"
+
+    lista.children[0].setAttribute("data-satisfeito", false)
+    lista.children[1].setAttribute("data-satisfeito", false)
+    lista.children[2].setAttribute("data-satisfeito", false)
+    lista.children[3].setAttribute("data-satisfeito", false)
+
+    // Voltar progresso pro padrão
+    pgProg.value = 25
+    pgProg.max = 100
+
+    // Voltar range para padrão
+    point.style.display = "block"
+    point.style.marginLeft = 0
+    point.style.marginRight = 0
+    point.innerText = "5"
+
+    // Mover para o topo da tela
+    logo.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
 // Declarações
 const fun = document.querySelector("#dvFundoPreview")
 const prev = document.querySelector("#imgPreview")
@@ -314,3 +354,6 @@ const range = document.querySelector("#rgDific")
     range.addEventListener("click", atualizarRange)
 const point = document.querySelector("#pRangeAtual")
 const conf = document.querySelector("#dvFundoConfirmacao")
+const res = document.querySelector("#rtApagar")
+    res.addEventListener("click", apagarForm)
+const logo = document.querySelector("#dvLogo")
